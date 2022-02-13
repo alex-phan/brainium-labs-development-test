@@ -1,24 +1,26 @@
-/* Global */
 @font-face {
-  font-family: "Neue Haas Grotesk Display Pro 55 Roman";
+  font-family: "NHGDP 55 Roman";
   src: url("fonts/NHaasGroteskDSPro-55Rg.otf");
 }
 
 @font-face {
-  font-family: "Neue Haas Grotesk Display Pro 65 Medium";
+  font-family: "NHGDP 65 Medium";
   src: url("fonts/NHaasGroteskDSPro-65Md.otf");
 }
 
 @font-face {
-  font-family: "Neue Haas Grotesk Display Pro 75 Bold";
+  font-family: "NHGDP 75 Bold";
   src: url("fonts/NHaasGroteskDSPro-75Bd.otf");
 }
 
+/* Global */
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Neue Haas Grotesk Display Pro 55 Roman";
+  font-family: "NHGDP 55 Roman";
+  font-size: 16px;
+  line-height: 24px;
 }
 
 h1,
@@ -27,38 +29,114 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Neue Haas Grotesk Display Pro 65 Medium";
+  font-family: "NHGDP 65 Medium";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.container {
+  margin: auto;
+  width: 85%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 8px 5px 8px;
+  font-family: "NHGDP 65 Medium";
+  font-size: 11px;
+  line-height: normal;
+  color: #208820;
+  background-color: #dcf0dc;
+}
+
+i {
+  margin: 0 6px;
+  font-size: 12px;
+  color: #20a030;
 }
 
 .link {
-  font-weight: bold;
+  font-family: "NHGDP 65 Medium";
   text-decoration: none;
+  color: #fff;
 }
 
 .link:hover {
   color: #dcf0dc;
 }
 
-/* Body */
+/* Alert */
 .alert {
   color: #fff;
   background-color: #107cc0;
 }
 
+.alert-title {
+  margin: 20px 0 4px 0;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.alert-message {
+  margin: 4px 0 20px 0;
+  font-size: 14px;
+  line-height: normal;
+}
+
+/* Header */
 .header {
+  padding: 72px 0;
   color: #fff;
   background-color: #102040;
 }
 
-.news {
-  color: #102040;
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
-.headline {
+.announcement {
+  width: 40%;
+}
+
+.announcement .link:hover {
+  text-decoration: underline;
+}
+
+.links {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  margin: 0 100px 10px 0;
+}
+
+.links i {
+  margin-left: 0;
   font-size: 18px;
-  color: #208820;
 }
 
-.preview {
-  color: #50647c;
+.links .link:hover {
+  position: relative;
+  left: 5px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .announcement {
+    width: 100%;
+  }
 }
